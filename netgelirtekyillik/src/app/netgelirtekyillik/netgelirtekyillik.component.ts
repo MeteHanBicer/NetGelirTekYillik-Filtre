@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NetgelirtekyillikComponent implements OnInit {
 
-dataLoaded:any=false;
+yil:any=false;
+tapualani:any=false;
+yong:any=false;
   constructor() { }
   ngOnInit() {
   }
