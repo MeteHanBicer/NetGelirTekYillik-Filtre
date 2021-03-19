@@ -13,4 +13,7 @@ yong:any=false;
   constructor() { }
   ngOnInit() {
   }
+alert(il:string,ilce:string,mahalle:string,ada:any,parsel:any,nitelik:any,kurusulu:string){
+  alert("İL : "+il+" İLÇE : "+ilce+" MAHALLE : "+mahalle+" ADA : "+ada+" PARSEL : "+parsel+" NİTELİK : "+nitelik+" KURU/SULU : "+kurusulu);
+}
 }

@@ -16,19 +16,19 @@
     </div>
     <div class="form-group">
         <label for="mahalle" >Mahalle </label>
-        <input type="text" class="form-control" style="width: 900px;" id="ilid" placeholder="Mahalle Giriniz">
+        <input #mahalle type="text" class="form-control" style="width: 900px;" id="ilid" placeholder="Mahalle Giriniz">
       </div>
       <div class="form-group">
         <label for="parsel" >Parsel </label>
-        <input type="text" class="form-control" style="width: 900px;" id="ilid" placeholder="Parsel Giriniz">
+        <input #parsel type="text" class="form-control" style="width: 900px;" id="ilid" placeholder="Parsel Giriniz">
       </div>
       <div class="form-group">
         <label for="nitelik" >Nitelik </label>
-        <input type="text" class="form-control" style="width: 900px;" id="ilid" placeholder="Nitelik Giriniz">
+        <input #nitelik type="text" class="form-control" style="width: 900px;" id="ilid" placeholder="Nitelik Giriniz">
       </div>
       <div class="form-group">
-        <label for="yil" >Yıl </label>  <input class="form-check-input"  (click)="yil=true"  type="checkbox" style="margin-left: 620px;"  #radio1 name="exampleRadios" id="exampleRadios3" value="option3">  <label class="form-check-label" for="exampleRadios3" style="color: red; float: right; margin-right: 35px;">Değer aralığı girmek istiyorum.</label>
-        <input *ngIf="yil==false" type="number" name="yil" min="2000" max="2020" class="form-control" style="width: 900px;" id="ilid" placeholder="Yıl Giriniz">
+        <label for="yil" >Yıl </label>  <input  class="form-check-input"  (click)="yil=true"  type="checkbox" style="margin-left: 620px;"  #radio1 name="exampleRadios" id="exampleRadios3" value="option3">  <label class="form-check-label" for="exampleRadios3" style="color: red; float: right; margin-right: 35px;">Değer aralığı girmek istiyorum.</label>
+        <input #yilsec *ngIf="yil==false" type="number" name="yil" min="2000" max="2020" class="form-control" style="width: 900px;" id="ilid" placeholder="Yıl Giriniz">
         <div *ngIf="yil==true">
       <input type="number" name="bas" min="1" max="2020"  class="form-control"  style="width: 420px; float: left;margin-right: 10px;" id="ilceid" placeholder="Başlangıç Değeri Giriniz">
         <input type="number" name="bit" min="1" max="2020"  class="form-control" style="width: 420px; float: right;margin-right: 10px;" id="ilceid" placeholder="Bitiş Değeri Giriniz"></div>
@@ -37,15 +37,15 @@
     <div class="col-md-6 form-group" style="float: left;">
         <div class="form-group">
         <label for="ilce" >İlçe</label>
-        <input type="text" class="form-control" style="width: 900px;" id="ilceid" placeholder="İlçe Giriniz">
+        <input #ilce type="text" class="form-control" style="width: 900px;" id="ilceid" placeholder="İlçe Giriniz">
     </div>
     <div class="form-group">
         <label for="ada" >Ada </label>
-        <input type="text" class="form-control" style="width: 900px;" id="ilid" placeholder="Ada Giriniz">
+        <input #ada type="text" class="form-control" style="width: 900px;" id="ilid" placeholder="Ada Giriniz">
       </div>
       <div class="form-group">
         <label for="tapualani" >Tapu Alanı (m²)</label> <input  (change)="tapualani=true" class="form-check-input" type="checkbox" style="margin-left: 530px;" name="exampleRadios2" id="exampleRadios2" value="option2">  <label class="form-check-label" for="exampleRadios2" style="color: red; float: right; margin-right: 35px;">Değer aralığı girmek istiyorum.</label>
-        <input *ngIf="tapualani==false" type="number" name="tapualani" min="0" max="999999" class="form-control" style="width: 900px;" id="ilid" placeholder="Tapu Alanı (m²) Giriniz">
+        <input #tapu *ngIf="tapualani==false" type="number" name="tapualani" min="0" max="999999" class="form-control" style="width: 900px;" id="ilid" placeholder="Tapu Alanı (m²) Giriniz">
         <div *ngIf="tapualani==true">
           <div class="form-group" style="float: left;">
             <input type="number" name="bas" min="1" max="2020"  class="form-control"  style="width: 420px;" id="ilceid" placeholder="Başlangıç Değeri Giriniz"></div>
@@ -54,7 +54,7 @@
       </div>
       <div class="form-group">
         <label for="yong" >Yıllık Ortalama Net Gelir (TL) </label> <input  (change)="yong=true" class="form-check-input" type="checkbox" style="margin-left: 438px;" name="exampleRadios1" id="exampleRadios1" value="option">  <label class="form-check-label" for="exampleRadios" style="color: red; float: right; margin-right: 35px;">Değer aralığı girmek istiyorum.</label>
-        <input *ngIf="yong==false" type="number" name="yilort" min="-99999" max="999999" class="form-control" style="width: 900px;" id="ilid" placeholder="Yıllık Ortalama Net Gelir (TL) Giriniz">
+        <input #netgelir *ngIf="yong==false" type="number" name="yilort" min="-99999" max="999999" class="form-control" style="width: 900px;" id="ilid" placeholder="Yıllık Ortalama Net Gelir (TL) Giriniz">
         <div *ngIf="yong==true">
           <div class="form-group" style="float: left;">
           <input type="number" name="bas" min="1" max="2020"  class="form-control"  style="width: 420px;" id="ilceid" placeholder="Başlangıç Değeri Giriniz"></div>
@@ -63,13 +63,13 @@
       </div>
       <div class="form-group">
         <label for="ks" >Kuru/Sulu</label>
-        <select class="form-select" aria-label="Default select example" style="width: 900px;height: 35px;" >
+        <select #kurusulu class="form-select" aria-label="Default select example" style="width: 900px;height: 35px;" >
           <option disabled>Seçiniz</option>
-            <option  value="1">Kuru</option>
-            <option value="2">Sulu</option>
+            <option  value="Kuru">Kuru</option>
+            <option value="Sulu">Sulu</option>
           </select>
       </div>
-      <button type="button" class="btn btn-dark" style="float: right;margin-right: 30px;margin-top:10px ;"><svg style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
+      <button (click)="alert(il.value,ilce.value,mahalle.value,ada.value,parsel.value,nitelik.value,kurusulu.value)" type="button" class="btn btn-dark" style="float: right;margin-right: 30px;margin-top:10px ;"><svg style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
         <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
       </svg>Fitrele</button>
       </div>
